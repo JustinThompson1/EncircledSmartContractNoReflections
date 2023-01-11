@@ -13,7 +13,7 @@ interface IERC20Metadata is IERC20 {
     function decimals() external view returns (uint8);
 }
 
-contract Encircled is Context, IERC20, IERC20Metadata, Ownable {
+contract EncircledFee is Context, IERC20, IERC20Metadata, Ownable {
     mapping(address => uint256) private _balances;
     mapping(address => mapping(address => uint256)) private _allowances;
     mapping(address => bool) private _isExcludedFromFee;

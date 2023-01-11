@@ -229,7 +229,7 @@ let credit = async function (to, amount) {
                 charles.address,
                 6
               )
-            ).to.be.revertedWith("ERC20: transfer amount exceeds allowance");
+            ).to.be.revertedWith("ERC20: insufficient allowance");
           });
           it("should not affect total supply", async function () {
             let supply1 = await tokenContract.totalSupply();
